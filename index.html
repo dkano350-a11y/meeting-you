@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Meeting You Chapter 1</title>
+    <title>Meeting You</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -148,8 +148,10 @@
       @media (max-height: 640px) { .x-gcard__art { height: 170px; } }
       .badge, .hark-mark { display: none !important; }
       .x-gcard__label { padding: 12px 8px; font: var(--type-body-strong); text-align: center; background: var(--x-pink) linear-gradient(135deg, var(--x-pink), #ff9cbd); color: #3a0d1f; }
-      .x-code { min-height: 120px; padding: 12px 14px; resize: none; font: var(--weight-regular) var(--size-prose)/1.45 "Geist Mono", monospace; word-break: break-all; user-select: text; -webkit-user-select: text; }
-      .x-code::placeholder { color: var(--x-ink-2); opacity: 0.7; font-family: var(--sans); }
+      .x-art--diya { background: radial-gradient(circle at 50% 45%, #ffe2a0, #e07a2e 55%, #3a1830); font-size: 64px; }
+      .x-art--voice { background: radial-gradient(circle at 50% 40%, #b9a6ff, #4b2f7a 60%, #160c26); font-size: 64px; }
+      .x-art--notes { background: repeating-linear-gradient(0deg, #fff6c9 0 22px, #f1e4a6 22px 23px); font-size: 64px; }
+      .x-end__pts { font: var(--type-label); color: var(--x-pink-soft); }
       .x-msg { font: var(--type-label); color: var(--x-pink-soft); min-height: 1.4em; }
       .x-gbtn { display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 52px; border-radius: var(--r-pill); border: 1px solid #dadce0; background: #fff; color: #1f1f1f; font: var(--type-body-strong); cursor: pointer; padding: 0 22px; box-shadow: 0 8px 26px rgb(0 0 0 / 0.35); transition: transform var(--dur-quick) var(--ease-out); }
       .x-gbtn:hover, .x-gbtn:focus-visible { transform: translateY(-2px); }
@@ -174,6 +176,12 @@
             <img class="x-bg" data-bg="inside" src="bg_cafe_inside.jpg" alt="" />
             <img class="x-bg" data-bg="studio" src="bg_studio.jpg" alt="" />
             <img class="x-bg" data-bg="library" src="bg_library.jpg" alt="" />
+            <img class="x-bg" data-bg="garba" src="bg_garba.jpg" alt="" loading="lazy" />
+            <img class="x-bg" data-bg="uttarayan" src="bg_uttarayan.jpg" alt="" loading="lazy" />
+            <img class="x-bg" data-bg="holi" src="bg_holi.jpg" alt="" loading="lazy" />
+            <img class="x-bg" data-bg="convocation" src="bg_convocation.jpg" alt="" loading="lazy" />
+            <img class="x-bg" data-bg="marine" src="bg_marine.jpg" alt="" loading="lazy" />
+            <img class="x-bg" data-bg="office" src="bg_office.jpg" alt="" loading="lazy" />
             <div class="x-tint" id="tint"></div>
             <div class="x-shade"></div>
             <img class="x-sprite" data-sprite="anaya" src="anaya.png" alt="Anaya" />
@@ -210,14 +218,14 @@
             <div class="x-title__shade"></div>
             <div class="x-title__body">
               <h1 class="x-title__h">Meeting You</h1>
-              <p class="x-title__sub">Chapter 1 · Pehli Baarish</p>
+              <p class="x-title__sub">2 Seasons · 32 Chapters · Ek Baarish Se Shuru</p>
               <p class="x-muted">Login karo, progress har device pe save rahegi.</p>
               <button class="x-gbtn" id="gLogin" type="button" disabled>
                 <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
                 <span>Continue with Google</span>
               </button>
               <p class="x-login__err" id="loginMsg" role="status">Ek second…</p>
-              <p class="x-foot">A Rutvik Dangar game · Prototype v0.3</p>
+              <p class="x-foot">A Rutvik Dangar game · v1.1</p>
             </div>
           </section>
 
@@ -227,13 +235,12 @@
             <div class="x-title__shade"></div>
             <div class="x-title__body">
               <h1 class="x-title__h">Meeting You</h1>
-              <p class="x-title__sub">Chapter 1 · Pehli Baarish</p>
+              <p class="x-title__sub">2 Seasons · 32 Chapters · Ek Baarish Se Shuru</p>
               <button class="x-btn x-btn--main" id="tStart" type="button">Start</button>
               <button class="x-btn" id="tCont" type="button" disabled>Continue</button>
-              <button class="x-btn" id="tCode" type="button">Code se Continue</button>
               <button class="x-btn" id="tRain" type="button" aria-pressed="false">Rain sound: Off</button>
               <p class="x-hi" id="tUser" hidden><span id="tHi"></span><span aria-hidden="true">·</span><button class="x-link" id="tLogout" type="button">Logout</button></p>
-              <p class="x-foot">A Rutvik Dangar game · Prototype v0.3</p>
+              <p class="x-foot">A Rutvik Dangar game · v1.1</p>
             </div>
           </section>
 
@@ -273,7 +280,6 @@
               <button class="x-btn" id="bLog" type="button">Log</button>
               <button class="x-btn" id="bAuto" type="button" aria-pressed="false">Auto: Off</button>
               <button class="x-btn" id="bRain" type="button" aria-pressed="false">Rain sound: Off</button>
-              <button class="x-btn" id="bCode" type="button">Save Code</button>
               <button class="x-btn" id="bHome" type="button">Home</button>
               <button class="x-btn" id="mLogout" type="button">Logout</button>
               <p class="x-muted" id="mHi"></p>
@@ -327,44 +333,17 @@
               <p class="x-end__score" id="endScore">0/100</p>
               <p class="x-muted" id="endWho">Aarav ❤ affection</p>
               <h2 class="x-end__name" id="endName"></h2>
+              <p class="x-end__pts" id="endPts" hidden></p>
               <p class="x-muted" id="endMems"></p>
-              <p class="x-soon" id="endSoon" hidden>Chapter 3: The Rival — coming soon</p>
+              <p class="x-soon" id="endSoon" hidden>Season 3 · Chapter 1 — Under Development 🚧</p>
               <button class="x-btn x-btn--main" id="eNext" type="button">Chapter 2 shuru karo →</button>
               <div class="x-row">
-                <button class="x-btn" id="eReplay" type="button">Replay</button>
-                <button class="x-btn" id="eRe2" type="button" hidden>Replay Chapter 2</button>
+                <button class="x-btn" id="eReC" type="button">Replay Chapter 1</button>
                 <button class="x-btn" id="eRe1" type="button" hidden>Replay from Chapter 1</button>
               </div>
               <div class="x-row">
                 <button class="x-btn" id="eGallery" type="button">Gallery</button>
-                <button class="x-btn" id="eCode" type="button">Save Code</button>
-              </div>
-            </div>
-          </section>
-
-          <!-- save code out -->
-          <section class="x-screen x-dim" id="codeScr" aria-label="Save code">
-            <div class="x-panel">
-              <h2>Save Code</h2>
-              <p class="x-muted">Yeh code sambhal ke rakho. Title pe "Code se Continue" mein paste karke isi line se shuru karo.</p>
-              <textarea class="x-input x-code" id="codeOut" readonly rows="4" spellcheck="false" aria-label="Your save code"></textarea>
-              <p class="x-msg" id="codeMsg" role="status"></p>
-              <div class="x-row">
-                <button class="x-btn x-btn--main" id="codeCopy" type="button">Copy</button>
-                <button class="x-btn" id="codeClose" type="button">Close</button>
-              </div>
-            </div>
-          </section>
-
-          <!-- save code in -->
-          <section class="x-screen x-dim" id="loadScr" aria-label="Continue from a save code">
-            <div class="x-panel">
-              <h2>Code se Continue</h2>
-              <textarea class="x-input x-code" id="codeIn" rows="4" spellcheck="false" autocapitalize="off" autocomplete="off" placeholder="Apna save code paste karo" aria-label="Apna save code paste karo"></textarea>
-              <p class="x-msg" id="loadMsg" role="status"></p>
-              <div class="x-row">
-                <button class="x-btn x-btn--main" id="loadGo" type="button">Load</button>
-                <button class="x-btn" id="loadBack" type="button">Back</button>
+                <button class="x-btn" id="eReplay" type="button">Home</button>
               </div>
             </div>
           </section>
@@ -401,6 +380,54 @@
                   <div class="x-art"><img src="bg_library.jpg" alt="The Old Haveli: the glass-dome library in evening drizzle" /><span class="x-art__veil" aria-hidden="true">Glass dome · boonda-baandi</span></div>
                   <div class="x-card__cap"><small>Memory 5</small><strong>The Old Haveli</strong></div>
                 </div>
+                <div class="x-card" data-mem="dandiya">
+                  <div class="x-art"><img src="bg_studio.jpg" alt="Dandiya Practice" loading="lazy" /><span class="x-art__veil" aria-hidden="true">Studio 3 · raat ki practice</span></div>
+                  <div class="x-card__cap"><small>Memory 6</small><strong>Dandiya Practice</strong></div>
+                </div>
+                <div class="x-card" data-mem="garba">
+                  <div class="x-art"><img src="bg_garba.jpg" alt="Teesri Taali" loading="lazy" /><span class="x-art__veil" aria-hidden="true">Garba Night · lights aur dhol</span></div>
+                  <div class="x-card__cap"><small>Memory 7</small><strong>Teesri Taali</strong></div>
+                </div>
+                <div class="x-card" data-mem="diya">
+                  <div class="x-art x-art--diya"><span aria-hidden="true">🪔</span></div>
+                  <div class="x-card__cap"><small>Memory 8</small><strong>Video Call Wala Diya</strong></div>
+                </div>
+                <div class="x-card" data-mem="model">
+                  <div class="x-art"><img src="bg_studio.jpg" alt="3 AM Model" loading="lazy" /><span class="x-art__veil" aria-hidden="true">Studio 3 · raat ke teen baje</span></div>
+                  <div class="x-card__cap"><small>Memory 9</small><strong>3 AM Model</strong></div>
+                </div>
+                <div class="x-card" data-mem="patang">
+                  <div class="x-art"><img src="bg_uttarayan.jpg" alt="Kai Po Che" loading="lazy" /><span class="x-art__veil" aria-hidden="true">Pol ki chhat · Uttarayan</span></div>
+                  <div class="x-card__cap"><small>Memory 10</small><strong>Kai Po Che</strong></div>
+                </div>
+                <div class="x-card" data-mem="voicenote">
+                  <div class="x-art x-art--voice"><span aria-hidden="true">🎧</span></div>
+                  <div class="x-card__cap"><small>Memory 11</small><strong>2 AM Voice Note</strong></div>
+                </div>
+                <div class="x-card" data-mem="riya">
+                  <div class="x-art"><img src="bg_cafe_inside.jpg" alt="Best Friend Forever" loading="lazy" /><span class="x-art__veil" aria-hidden="true">The Chai Spot · surprise</span></div>
+                  <div class="x-card__cap"><small>Memory 12</small><strong>Best Friend Forever</strong></div>
+                </div>
+                <div class="x-card" data-mem="holi">
+                  <div class="x-art"><img src="bg_holi.jpg" alt="Pehla Rang" loading="lazy" /><span class="x-art__veil" aria-hidden="true">Courtyard · gulaal</span></div>
+                  <div class="x-card__cap"><small>Memory 13</small><strong>Pehla Rang</strong></div>
+                </div>
+                <div class="x-card" data-mem="notes">
+                  <div class="x-art x-art--notes"><span aria-hidden="true">📝</span></div>
+                  <div class="x-card__cap"><small>Memory 14</small><strong>Sticky Notes</strong></div>
+                </div>
+                <div class="x-card" data-mem="farewell">
+                  <div class="x-art"><img src="bg_garba.jpg" alt="Farewell Ki Raat" loading="lazy" /><span class="x-art__veil" aria-hidden="true">Farewell · aakhri dance</span></div>
+                  <div class="x-card__cap"><small>Memory 15</small><strong>Farewell Ki Raat</strong></div>
+                </div>
+                <div class="x-card" data-mem="chhata">
+                  <div class="x-art"><img src="bg_cafe_rain.jpg" alt="Phir Se Ek Chhata" loading="lazy" /><span class="x-art__veil" aria-hidden="true">The Chai Spot · phir se baarish</span></div>
+                  <div class="x-card__cap"><small>Memory 16</small><strong>Phir Se Ek Chhata</strong></div>
+                </div>
+                <div class="x-card" data-mem="meetingyou">
+                  <div class="x-art"><img src="bg_convocation.jpg" alt="Meeting You" loading="lazy" /><span class="x-art__veil" aria-hidden="true">Convocation · ek nayi shuruaat</span></div>
+                  <div class="x-card__cap"><small>Memory 17</small><strong>Meeting You</strong></div>
+                </div>
               </div>
               <button class="x-btn" id="galClose" type="button">Back</button>
             </div>
@@ -420,6 +447,7 @@
       </main>
     </div>
     <script src="hark.js"></script>
+    <script src="chapters.js"></script>
     <script>
       (function () {
         /* {g:male|female} picks the variant for the player's gender; {li} is the love interest */
@@ -444,9 +472,9 @@
           { choice: [
             { t: "“Thank you! Aap bhi Navrang mein ho?”", aff: 10, flag: "friendly", then: [{ s: A, t: "Haan. Final year. Aur tum… {g:naye|nayi} ho, yeh saaf dikh raha hai." }] },
             { t: "“Main manage kar {g:lunga|lungi}, thanks.”", aff: -5, then: [{ s: A, t: "Haan, dikh raha hai kitna manage ho raha hai. (slight smile)" }] },
-            { t: "Chup-chaap sketchbook dikhakar smile karna", act: true, aff: 5, flag: "shy", then: [{ s: A, t: "Arches? Achha drawn hai. Kahn ka design hai yeh campus." }] }
+            { t: "Chup-chaap sketchbook dikhakar smile karna", act: true, aff: 5, flag: "shy", then: [{ s: A, t: "Arches? Accha drawn hai. Kahn ka design hai yeh campus." }] }
           ] },
-          { n: "Baarish aur tez ho gayi. {g:Usne|Woh} cafe ka darwaza khola." },
+          { n: "Baarish aur tez ho gayi. Usne cafe ka darwaza khola." },
           { s: A, t: "Andar aa jao. Yeh baarish itni jaldi nahi rukegi." },
 
           { scene: { bg: "inside", rain: 0.5, tint: false } },
@@ -478,7 +506,7 @@
           { s: A, t: "Kal 9 baje, Studio 3. Group project allot hone wale hain. …Late mat hona, {name}." },
           { sprite: null },
           { n: "Usne mera naam kaise jaana? …Shayad sketchbook pe likha tha." },
-          { s: "Riya · 📱 call", t: "OMG {name}! Tu {g:Anaya Mehta ke saath tha?! Puri college ke ladke|Aarav Shah ke saath thi?! Puri college ki ladkiyaan} uske peeche hain — especially {g:Kabir|Kiara}. Kal sab batana!" },
+          { s: "Riya · 📱 call", t: "OMG {name}! Tu {g:Anaya Mehta ke saath tha?! Poori college ke ladke|Aarav Shah ke saath thi?! Poori college ki ladkiyaan} uske peeche hain — especially {g:Kabir|Kiara}. Kal sab batana!" },
           { rain: 0 },
           { n: "Baarish ruk gayi. Par dil mein kuch shuru ho gaya tha." },
           { end: true }
@@ -494,7 +522,7 @@
           { s: N, t: "Riya, saans toh lene de! Aur tujhe yeh line kaise pata?" },
           { s: R, t: "Kal raat call pe tune hi teen baar repeat kiya tha. 😏" },
           { s: R, t: "Aur kal ka umbrella waala scene… poori kahani abhi bhi pending hai." },
-          { s: R, t: "Waise main canteen ki khidki se sab dekh rahi thi. Ek navy chhata, do log, aur tu muskura {g:raha|rahi} tha… 👀", when: "mem:umbrella" },
+          { s: R, t: "Waise main canteen ki khidki se sab dekh rahi thi. Ek navy chhata, do log, aur tu muskura {g:raha tha|rahi thi}… 👀", when: "mem:umbrella" },
           { s: N, t: "Tu jasoos hai kya?!", when: "mem:umbrella" },
           { s: R, t: "Suna hai {li} ne tujhe apna umbrella de diya? Woh toh kisi ko apna pen tak nahi {g:deti|deta}!", when: "!mem:umbrella" },
           { s: N, t: "Bas… baarish thi. Aur kuch nahi.", when: "!mem:umbrella" },
@@ -512,9 +540,9 @@
           { n: "Uski nazar poori class mein ghoomi… aur mujh pe aake ruk gayi." },
           { s: A, t: "Chai, baarish, sketchbook… aur ab Studio 3 bhi. {name}, right?" },
           { s: P, t: "Pairs lottery se banenge. Har pair ko ek mentor milega." },
-          { n: "Parchiyan khulti gayi. Aur phir —" },
+          { n: "Parchiyan khulti gayin. Aur phir —" },
           { s: P, t: "{name} — aap {li} ke saath mentor pair mein ho." },
-          { s: RV, t: "Seriously, sir? Main toh {li} ke saath hi kaam karna {g:chahta|chahti} tha… lottery se?" },
+          { s: RV, t: "Seriously, sir? Main toh {li} ke saath hi kaam karna {g:chahta tha|chahti thi}… lottery se?" },
           { n: RV + " ne pencil itni zor se rakhi ki nib toot gayi." },
           { n: "{li} seedha mere table pe {g:aayi|aaya}." },
           { choice: [
@@ -526,8 +554,8 @@
           { n: "Brainstorm shuru. {li} ne ek khaali sheet mere saamne rakh di." },
           { s: A, t: "Toh? Pavilion ka idea kya hai? Jo pehla dimaag mein aaye." },
           { choice: [
-            { t: "“Baarish ki awaaz sunne ke liye — tin ki chhat, khule kinare.”", aff: 10, mem: "pavilion", then: [{ s: A, t: "…Ek shelter jo baarish se chhupaye nahi, sunaye. Yeh sach mein achha hai." }, { n: "Ek hi sheet, do pencil. Pehli line saath mein kheenchi." }, { memShow: "pavilion" }] },
-            { t: "“Kuch Instagram-worthy, colourful wall ke saath.”", aff: 4, then: [{ s: A, t: "Colour achha hai. Par socho — baarish mein log wahan rukenge kyun?" }] },
+            { t: "“Baarish ki awaaz sunne ke liye — tin ki chhat, khule kinare.”", aff: 10, mem: "pavilion", then: [{ s: A, t: "…Ek shelter jo baarish se chhupaye nahi, sunaye. Yeh sach mein accha hai." }, { n: "Ek hi sheet, do pencil. Pehli line saath mein kheenchi." }, { memShow: "pavilion" }] },
+            { t: "“Kuch Instagram-worthy, colourful wall ke saath.”", aff: 4, then: [{ s: A, t: "Colour accha hai. Par socho — baarish mein log wahan rukenge kyun?" }] },
             { t: "“Tum batao, tum senior ho.”", aff: 2, then: [{ s: A, t: "Senior hoon, isliye pooch {g:rahi|raha} hoon. Mujhe tumhara idea chahiye." }] }
           ] },
           { s: RV, t: "{li}, mera model bhi dekh lo na? Bas do minute." },
@@ -552,7 +580,7 @@
           { choice: [
             { t: "“Kabhi mujhe bhi woh pol {g:dikhaogi|dikhaoge}?”", aff: 8, mem: "haveli", then: [{ s: A, t: "…Haveli ab band padi hai. Par haan. Ek din. Kisi baarish waale din." }, { memShow: "haveli" }] },
             { t: "“Isliye tumhare sketches itne alag hain.”", aff: 5, then: [{ s: A, t: "Shayad. Har line mein thoda sa Dada hai." }] },
-            { t: "“Achha… deadline ka kya? Sirf 2 hafte hain.”", aff: 1, then: [{ s: A, t: "(halki hasi) Haan. Deadline. Sahi kaha." }] }
+            { t: "“Accha… deadline ka kya? Sirf 2 hafte hain.”", aff: 1, then: [{ s: A, t: "(halki hasi) Haan. Deadline. Sahi kaha." }] }
           ] },
           { n: "Lights do baar flicker hui." },
           { s: "📢 Announcement", t: "Library 10 minute mein band ho rahi hai. Kripya apna saamaan le lein." },
@@ -561,7 +589,7 @@
           { n: "{li} ne navy umbrella uthaya… phir {g:ruki|ruka}, aur mere haath mein thama diya." },
           { s: A, t: "Tum rakh lo. Mujhe bheegne ki aadat hai." },
           { s: A, t: "Kal mil {g:rahe|rahi} ho na? 9 baje, Studio 3." },
-          { s: N, t: "Late nahi {g:hounga|houngi}. Promise." },
+          { s: N, t: "Late nahi {g:hoonga|hoongi}. Promise." },
           { sprite: null },
 
           { scene: { bg: "studio", rain: 0, tint: false } },
@@ -571,20 +599,56 @@
           { n: "Baarish ruk chuki thi. Par ek naya toofan aane wala tha." },
           { end: true }
         ];
-        function scriptOf(s) { return (s || st || {}).chap === 2 ? SCRIPT2 : SCRIPT; }
+        /* Chapters 3-20 live in chapters.js as window.MY_CHAPTERS[n] = { title, names: [sweet, normal, quiet], script } */
+        var CH = window.MY_CHAPTERS || {}, S1 = 20, LAST = 32;
+        /* internal chapter 21 = Season 2 · Chapter 1 */
+        function chLabel(c) { return c > S1 ? "Season 2 · Chapter " + (c - S1) : "Chapter " + c; }
+        function chShort(c) { return c > S1 ? "S2 Ch" + (c - S1) : "Ch" + c; }
+        function chapOk(c) { return c === 1 || c === 2 || !!CH[c]; }
+        function scriptOf(s) { var c = (s || st || {}).chap || 1; return c === 1 ? SCRIPT : c === 2 ? SCRIPT2 : (CH[c] ? CH[c].script : []); }
+        function chTitle(c) { return c === 1 ? "Pehli Baarish" : c === 2 ? "Same Class" : (CH[c] ? CH[c].title : ""); }
+        /* best possible points per chapter = sum of the top option of every unconditional choice */
+        Object.keys(CH).forEach(function (k) {
+          var mx = 0;
+          CH[k].script.forEach(function (stp) {
+            if (stp.choice && !stp.when) mx += Math.max(0, Math.max.apply(null, stp.choice.map(function (o) { return o.aff || 0; })));
+          });
+          CH[k].max = mx || 1;
+        });
+        /* when: "mem:x" | "flag:x" | "aff>=60" | "aff<40", "!" negates, "&" joins */
         function cond(w) {
-          var neg = w.charAt(0) === "!", p = w.replace(/^!/, "").split(":");
-          var v = !!(p[0] === "mem" ? st.mems[p[1]] : st.flags[p[1]]);
+          if (w.indexOf("&") >= 0) return w.split("&").every(cond);
+          var neg = w.charAt(0) === "!", x = w.replace(/^!/, ""), v;
+          var m = x.match(/^aff(>=|<=|>|<)(\d+)$/);
+          if (m) { var n = +m[2]; v = m[1] === ">=" ? st.aff >= n : m[1] === "<=" ? st.aff <= n : m[1] === ">" ? st.aff > n : st.aff < n; }
+          else { var p = x.split(":"); v = !!(p[0] === "mem" ? st.mems[p[1]] : st.flags[p[1]]); }
           return neg ? !v : v;
         }
-        var MEM_NAMES = { umbrella: "Umbrella for Two", chai: "Masala Chai", sketch: "The Sketch", pavilion: "Rain Pavilion", haveli: "The Old Haveli" };
+        var MEM_NAMES = { umbrella: "Umbrella for Two", chai: "Masala Chai", sketch: "The Sketch", pavilion: "Rain Pavilion", haveli: "The Old Haveli",
+          dandiya: "Dandiya Practice", garba: "Teesri Taali", diya: "Video Call Wala Diya", model: "3 AM Model", patang: "Kai Po Che", voicenote: "2 AM Voice Note",
+          riya: "Best Friend Forever", holi: "Pehla Rang", notes: "Sticky Notes", farewell: "Farewell Ki Raat", chhata: "Phir Se Ek Chhata", meetingyou: "Meeting You" };
+        var MEMS = ["umbrella", "chai", "sketch", "pavilion", "haveli", "dandiya", "garba", "diya", "model", "patang", "voicenote", "riya", "holi", "notes", "farewell", "chhata", "meetingyou"];
+        var MEM_CH = { umbrella: 1, chai: 1, sketch: 1, pavilion: 2, haveli: 2, dandiya: 3, garba: 4, diya: 6, model: 8, patang: 10, voicenote: 12, riya: 13, holi: 14, notes: 15, farewell: 18, chhata: 19, meetingyou: 20 };
+        var FINAL = {
+          endTrue: "True Ending — Hamesha Ke Liye",
+          endSweet: "Sweet Ending — Ek Chhata, Do Dil",
+          endNormal: "Happy Ending — Phir Se Saath",
+          endQuiet: "Happy Ending — Dheere Dheere, Saath Saath"
+        };
+        function memCount() { return MEMS.filter(function (k) { return st.mems[k]; }).length; }
+        function decideEnding() {
+          ["endTrue", "endSweet", "endNormal", "endQuiet"].forEach(function (k) { delete st.flags[k]; });
+          /* every final ending is a happy one; rank only picks the epilogue's flavour */
+          var a = st.aff, m = memCount();
+          st.flags[a >= 90 && m >= 12 ? "endTrue" : a >= 70 ? "endSweet" : a >= 45 ? "endNormal" : "endQuiet"] = true;
+        }
 
         var $ = function (id) { return document.getElementById(id); };
         var st, snap = null, save = null, typing = null, full = "", waiting = false, busy = false, autoOn = false, autoT = null;
         var unlockedEver = {};
         var clone = function (o) { return JSON.parse(JSON.stringify(o)); };
         var pickG = "f";
-        function fresh(name, g) { return { pc: 0, pending: [], aff: 20, flags: {}, mems: {}, name: name, gender: g, bg: null, rain: 0, tint: false, sprite: null, log: [], ch: null, chap: 1, c1aff: null }; }
+        function fresh(name, g) { return { pc: 0, pending: [], aff: 20, flags: {}, mems: {}, name: name, gender: g, bg: null, rain: 0, tint: false, sprite: null, log: [], ch: null, chap: 1, cp: 0, chStart: { aff: 20, flags: {}, mems: {} } }; }
         function isBoy(s) { return (s || st || {}).gender === "m"; }
         function liName(s) { return isBoy(s) ? "Anaya" : "Aarav"; }
         function fill(t) {
@@ -613,7 +677,7 @@
             else { cb.removeAttribute("role"); cb.removeAttribute("tabindex"); }
           }
         }
-        ["genScr", "nameScr", "menuScr", "homeScr", "newScr", "memScr", "logScr", "endScr", "galScr", "codeScr", "loadScr", "cardScr"].forEach(function (id) { screen(id, false); });
+        ["genScr", "nameScr", "menuScr", "homeScr", "newScr", "memScr", "logScr", "endScr", "galScr", "cardScr"].forEach(function (id) { screen(id, false); });
         function toast(msg) { var t = $("toast"); t.textContent = msg; t.classList.add("is-on"); clearTimeout(toast.t); toast.t = setTimeout(function () { t.classList.remove("is-on"); }, 1400); }
 
         function applyVisuals() {
@@ -625,7 +689,7 @@
         }
         function drawAff() { $("affWho").textContent = liName() + " ❤"; $("affNum").textContent = st.aff + "/100"; $("affFill").style.width = st.aff + "%"; }
         function changeAff(d) {
-          st.aff = Math.max(0, Math.min(100, st.aff + d)); drawAff();
+          st.aff = Math.max(0, Math.min(100, st.aff + d)); st.cp = (st.cp || 0) + d; drawAff();
           if (!d) return;
           var p = document.createElement("span");
           p.className = "x-pop" + (d < 0 ? " is-down" : "");
@@ -643,7 +707,10 @@
             if (step.scene) { st.bg = step.scene.bg; st.rain = step.scene.rain; st.tint = step.scene.tint; applyVisuals(); continue; }
             if ("sprite" in step && !step.t) { st.sprite = step.sprite ? spriteFor(step.sprite) : null; applyVisuals(); continue; }
             if ("rain" in step) { st.rain = step.rain; setRain(st.rain); continue; }
+            if (step.decide) { decideEnding(); continue; }
+            if (step.set) { st.flags[step.set] = true; continue; }
             autosave();
+            if (step.memGet) { st.mems[step.memGet] = true; unlockedEver[step.memGet] = true; return showMem(step.memGet); }
             if (step.choice) return showChoice(step.choice);
             if (step.memShow) return showMem(step.memShow);
             if (step.card) return showCard(step.card);
@@ -656,6 +723,7 @@
           var who = step.s ? fill(step.s) : "";
           full = fill(step.n || step.t);
           st.log.push({ who: who, t: full });
+          if (st.log.length > 400) st.log.splice(0, st.log.length - 400);
           var tag = $("tag"), tx = $("text");
           tag.hidden = !who; tag.textContent = who;
           tx.classList.toggle("is-narr", !who);
@@ -712,6 +780,7 @@
         function showMem(id) {
           busy = true;
           memCard = document.querySelector('.x-card[data-mem="' + id + '"]');
+          if (!memCard) { busy = false; return next(); }
           memHome = memCard.parentNode; memNext = memCard.nextSibling;
           memCard.classList.remove("is-locked");
           $("memSlot").appendChild(memCard);
@@ -727,18 +796,25 @@
 
         function showEnd() {
           busy = true;
-          var a = st.aff, two = st.chap === 2, name;
-          if (two) name = a >= 85 ? "Sweet — Ek Chhata, Do Dil" : a >= 60 ? "Normal — Partners Ban Gaye" : "Quiet — Sirf Project Partners?";
-          else name = a >= 60 ? "Sweet Ending — Pehli Baarish, Pehli Dhadkan" : a >= 35 ? "Normal Ending — Ek Nayi Shuruaat" : "Quiet Ending — Baarish Ke Baad";
-          var list = two ? MEMS : MEMS.slice(0, 3);
-          var got = list.filter(function (k) { return st.mems[k]; });
-          $("endEyebrow").textContent = "Chapter " + (two ? 2 : 1) + " complete";
+          var c = st.chap || 1, a = st.aff, p = st.cp || 0, name;
+          var avail = MEMS.filter(function (k) { return MEM_CH[k] <= c; });
+          var got = avail.filter(function (k) { return st.mems[k]; });
+          if (c === 1) name = a >= 60 ? "Sweet Ending — Pehli Baarish, Pehli Dhadkan" : a >= 35 ? "Normal Ending — Ek Nayi Shuruaat" : "Quiet Ending — Baarish Ke Baad";
+          else if (c === 2) name = a >= 85 ? "Sweet — Ek Chhata, Do Dil" : a >= 60 ? "Normal — Partners Ban Gaye" : "Quiet — Sirf Project Partners?";
+          else if (c === S1) { if (!st.flags.endTrue && !st.flags.endSweet && !st.flags.endNormal && !st.flags.endQuiet) decideEnding(); name = FINAL[["endTrue", "endSweet", "endNormal", "endQuiet"].filter(function (k) { return st.flags[k]; })[0]]; }
+          else { var mx = CH[c].max; name = p >= mx * 0.7 ? CH[c].names[0] : p >= mx * 0.3 ? CH[c].names[1] : CH[c].names[2]; }
+          $("endEyebrow").textContent = c === S1 ? "Season 1 · The End — Thank you for playing" : c === LAST ? "Season 2 · The End — Thank you for playing" : chLabel(c) + " complete · " + chTitle(c);
           $("endScore").textContent = a + "/100";
           $("endWho").textContent = (isBoy() ? "Anaya Mehta" : "Aarav Shah") + " ❤ affection";
           $("endName").textContent = name;
-          $("endMems").textContent = "Memories unlocked: " + got.length + "/" + list.length + (got.length ? " · " + got.map(function (k) { return MEM_NAMES[k]; }).join(", ") : "");
-          $("endSoon").hidden = !two; $("eNext").hidden = two; $("eReplay").hidden = two;
-          $("eRe2").hidden = !two; $("eRe1").hidden = !two;
+          $("endPts").hidden = c < 3;
+          $("endPts").textContent = c === S1 ? "20 chapters, ek kahani. Shukriya ❤ Par kahani abhi khatam nahi hui…" : c === LAST ? "Season 2 poora hua — 32 chapters, ek hi kahani. Shukriya ❤" : "Is chapter ke points: " + (p > 0 ? "+" : "") + p;
+          $("endMems").textContent = "Memories unlocked: " + got.length + "/" + avail.length + (got.length && c < 3 ? " · " + got.map(function (k) { return MEM_NAMES[k]; }).join(", ") : "");
+          $("eNext").hidden = c >= LAST || !chapOk(c + 1);
+          $("eNext").textContent = c === S1 ? "Season 2 shuru karo →" : chLabel(c + 1) + " shuru karo →";
+          $("endSoon").hidden = c < LAST;
+          $("eReC").textContent = "Replay " + (c > S1 ? "S2 Ch" + (c - S1) : "Chapter " + c);
+          $("eRe1").hidden = c === 1;
           screen("endScr", true);
         }
 
@@ -759,31 +835,28 @@
         $("cardScr").addEventListener("click", function (e) { e.stopPropagation(); closeCard(); });
         $("cardBody").addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); closeCard(); } });
 
-        /* chapter transitions */
-        var CH2_FLAGS = ["joked", "stoodUp"], CH2_MEMS = ["pavilion", "haveli"];
+        /* chapter transitions: chStart remembers the state a chapter began with, so it can be replayed */
         function leaveEnd() {
           clearInterval(typing); typing = null; clearTimeout(autoT); waiting = false;
-          ["endScr", "galScr", "codeScr"].forEach(function (id) { screen(id, false); });
+          ["endScr", "galScr"].forEach(function (id) { screen(id, false); });
           $("choices").classList.remove("is-on"); $("choices").innerHTML = ""; $("frame").classList.remove("is-choosing");
         }
-        function startCh2(again) {
+        function startChap(n, again) {
           if (!st) return;
           leaveEnd();
-          if (again || st.chap === 2) {
-            if (typeof st.c1aff === "number") st.aff = st.c1aff;
-            CH2_FLAGS.forEach(function (k) { delete st.flags[k]; });
-            CH2_MEMS.forEach(function (k) { delete st.mems[k]; });
-          } else st.c1aff = st.aff;
-          st.chap = 2; st.pc = 0; st.pending = []; st.ch = null; st.sprite = null;
+          if (n <= 1) { pickG = st.gender; st = fresh(st.name, st.gender); begin(); next(); return; }
+          if (!chapOk(n)) return toast("Yeh chapter load nahi hua. Page refresh karo.");
+          if (again) {
+            var cs = st.chStart || {};
+            if (typeof cs.aff === "number") st.aff = cs.aff;
+            st.flags = clone(cs.flags || {}); st.mems = clone(cs.mems || {});
+          } else st.chStart = { aff: st.aff, flags: clone(st.flags), mems: clone(st.mems) };
+          st.chap = n; st.pc = 0; st.pending = []; st.ch = null; st.sprite = null; st.cp = 0;
           begin(); next();
         }
-        $("eNext").addEventListener("click", function () { startCh2(false); });
-        $("eRe2").addEventListener("click", function () { startCh2(true); });
-        $("eRe1").addEventListener("click", function () {
-          if (!st) return;
-          leaveEnd(); pickG = st.gender;
-          st = fresh(st.name, st.gender); begin(); next();
-        });
+        $("eNext").addEventListener("click", function () { startChap((st.chap || 1) + 1, false); });
+        $("eReC").addEventListener("click", function () { startChap(st.chap || 1, true); });
+        $("eRe1").addEventListener("click", function () { startChap(1); });
 
         function openGallery() {
           document.querySelectorAll(".x-gallery .x-card").forEach(function (c) { c.classList.toggle("is-locked", !unlockedEver[c.dataset.mem]); });
@@ -897,80 +970,26 @@
           if (!st.log) st.log = [];
           if (!st.flags) st.flags = {};
           if (!st.mems) st.mems = {};
-          if (st.chap !== 2) st.chap = 1;
-          if (typeof st.c1aff !== "number") st.c1aff = null;
-          ["genScr", "nameScr", "loadScr", "codeScr"].forEach(function (id) { screen(id, false); });
+          var c = parseInt(st.chap, 10);
+          st.chap = c >= 1 && c <= LAST ? c : 1;
+          if (typeof st.cp !== "number") st.cp = 0;
+          if (!st.chStart) {
+            /* saves from before v1.0: rebuild where the current chapter began */
+            var f0 = clone(st.flags), m0 = clone(st.mems);
+            if (st.chap === 2) { ["joked", "stoodUp"].forEach(function (k) { delete f0[k]; }); ["pavilion", "haveli"].forEach(function (k) { delete m0[k]; }); }
+            st.chStart = st.chap === 1 ? { aff: 20, flags: {}, mems: {} } : { aff: typeof st.c1aff === "number" ? st.c1aff : st.aff, flags: f0, mems: m0 };
+          }
+          delete st.c1aff;
+          ["genScr", "nameScr"].forEach(function (id) { screen(id, false); });
           begin(); next();
         }
         $("tCont").addEventListener("click", function () { if (!save) return; resume(save); });
 
 
-        /* ---------- auto-save, storage, save code ---------- */
-        var KEY = "meetingYou.ch1.save", stored = false, lastCode = "";
-        var FLAGS = ["friendly", "shy", "trust", "sketch", "joked", "stoodUp"], MEMS = ["umbrella", "chai", "sketch", "pavilion", "haveli"];
-        function bits(obj, list) { var n = 0; list.forEach(function (k, i) { if (obj && obj[k]) n |= 1 << i; }); return n; }
-        function unbits(n, list) { var o = {}; list.forEach(function (k, i) { if (n & (1 << i)) o[k] = true; }); return o; }
-        function b64e(s) {
-          var u = unescape(encodeURIComponent(s));
-          return btoa(u).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
-        }
-        function b64d(s) {
-          s = s.replace(/-/g, "+").replace(/_/g, "/");
-          while (s.length % 4) s += "=";
-          return decodeURIComponent(escape(atob(s)));
-        }
-        function encode(s) {
-          var opt = "", k = "";
-          if (s.pending && s.pending.length && s.ch) {
-            var then = scriptOf(s)[s.ch[0]].choice[s.ch[1]].then;
-            opt = s.ch[0] + "-" + s.ch[1]; k = String(then.length - s.pending.length);
-          }
-          return b64e(["2", s.chap === 2 ? 2 : 1, typeof s.c1aff === "number" ? s.c1aff : "", s.gender, s.aff, s.pc, opt, k, bits(s.flags, FLAGS), bits(s.mems, MEMS), bits(unlockedEver, MEMS), s.name].join("."));
-        }
-        function rebuildScene(s) {
-          s.bg = null; s.rain = 0; s.tint = false; s.sprite = null;
-          var keep = st; st = s;
-          var SC = scriptOf(s);
-          for (var i = 0; i < s.pc && i < SC.length; i++) {
-            var step = SC[i];
-            if (step.scene) { s.bg = step.scene.bg; s.rain = step.scene.rain; s.tint = step.scene.tint; }
-            else if ("sprite" in step && !step.t) s.sprite = step.sprite ? spriteFor(step.sprite) : null;
-            else if ("rain" in step) s.rain = step.rain;
-          }
-          st = keep;
-        }
-        function decode(code) {
-          var raw = String(code || "").replace(/\s+/g, "");
-          var m = raw.match(/s=([A-Za-z0-9_-]+)/); if (m) raw = m[1];
-          if (!/^[A-Za-z0-9_-]{8,}$/.test(raw)) return null;
-          var txt; try { txt = b64d(raw); } catch (e) { return null; }
-          var p = txt.split(".");
-          var chap = 1, c1 = null;
-          if (p[0] === "2" && p.length >= 12) {
-            chap = p[1] === "2" ? 2 : p[1] === "1" ? 1 : 0;
-            c1 = p[2] === "" ? null : (/^\d+$/.test(p[2]) ? parseInt(p[2], 10) : -1);
-            if (!chap || (c1 !== null && !(c1 >= 0 && c1 <= 100))) return null;
-            p = ["1"].concat(p.slice(3));
-          }
-          if (p.length < 10 || p[0] !== "1") return null;
-          var SC = chap === 2 ? SCRIPT2 : SCRIPT;
-          var name = p.slice(9).join(".").trim();
-          var num = function (v) { return /^\d+$/.test(v) ? parseInt(v, 10) : NaN; };
-          var g = p[1], aff = num(p[2]), pc = num(p[3]), fl = num(p[6]), me = num(p[7]), ga = num(p[8]);
-          if ((g !== "m" && g !== "f") || !name || name.length > 16) return null;
-          if (!(aff >= 0 && aff <= 100) || !(pc >= 0 && pc < SC.length) || isNaN(fl) || isNaN(me) || isNaN(ga)) return null;
-          var s = fresh(name, g); s.aff = aff; s.pc = pc; s.flags = unbits(fl, FLAGS); s.mems = unbits(me, MEMS);
-          s.chap = chap; s.c1aff = c1;
-          if (p[4]) {
-            var c = p[4].split("-"), ci = num(c[0]), oi = num(c[1] || ""), k = num(p[5]);
-            var cs = SC[ci], opt = cs && cs.choice && cs.choice[oi];
-            if (!opt || ci !== pc - 1 || !(k >= 0 && k < opt.then.length)) return null;
-            s.pending = clone(opt.then).slice(k); s.ch = [ci, oi];
-          }
-          rebuildScene(s);
-          return { st: s, gal: unbits(ga, MEMS) };
-        }
-        function liveCode() { return save ? encode(save) : ""; }
+        /* ---------- auto-save + storage (local cache per user, cloud sync in the module below) ---------- */
+        var KEY = "meetingYou.ch1.save", stored = false;
+        /* old builds put a save code in the URL (#s=...); it is no longer used, so drop it */
+        try { if (/^#s=/.test(location.hash)) history.replaceState(null, "", location.pathname + location.search); } catch (e) {}
         /* local cache is per signed-in user; cloud sync lives in the module script below */
         var uid = null, localT = 0, cloudReady = false;
         function lkey() { return KEY + "." + uid; }
@@ -988,7 +1007,6 @@
           if (!snap) return;
           try {
             save = clone(snap);
-            lastCode = encode(save);
           } catch (e) { return; }
           localT = Date.now();
           writeLocal();
@@ -997,7 +1015,6 @@
         function applySave(o) {
           save = o.st; localT = o.t || 0;
           Object.keys(o.gal || {}).forEach(function (k) { if (o.gal[k]) unlockedEver[k] = true; });
-          try { lastCode = encode(save); } catch (e) {}
         }
         function readLocal() {
           try {
@@ -1016,7 +1033,7 @@
           return null;
         }
         function resetAll() {
-          save = null; snap = null; lastCode = ""; localT = 0;
+          save = null; snap = null; localT = 0;
           Object.keys(unlockedEver).forEach(function (k) { delete unlockedEver[k]; });
         }
         function firstName(u) {
@@ -1028,10 +1045,10 @@
           var b = $("tCont");
           if (uid && !cloudReady && !save) { b.disabled = true; b.textContent = "Save dhoond rahe hain…"; return; }
           b.disabled = !save;
-          b.textContent = save ? "Continue — Ch" + (save.chap === 2 ? 2 : 1) + " · " + save.name + ", " + liName(save) + " ❤ " + save.aff : "Continue";
+          b.textContent = save ? "Continue — " + chShort(save.chap || 1) + " · " + save.name + ", " + liName(save) + " ❤ " + save.aff : "Continue";
         }
         function hideGameScreens() {
-          ["genScr", "nameScr", "newScr", "codeScr", "loadScr"].forEach(function (id) { screen(id, false); });
+          ["genScr", "nameScr", "newScr"].forEach(function (id) { screen(id, false); });
         }
         window.MeetingYou = {
           /* called by the auth module once Firebase knows who is signed in */
@@ -1068,53 +1085,6 @@
         $("tLogout").addEventListener("click", askLogout);
         $("mLogout").addEventListener("click", askLogout);
 
-        var codeBusyBefore = false, codeFromHud = false;
-        function openCode(fromHud) {
-          var code = ""; try { code = liveCode(); } catch (e) {}
-          codeFromHud = fromHud;
-          if (fromHud) { codeBusyBefore = busy; busy = true; clearTimeout(autoT); }
-          screen("codeScr", true);
-          $("codeOut").value = code || "Abhi koi save nahi hai.";
-          $("codeMsg").textContent = "";
-          setTimeout(function () { $("codeCopy").focus({ preventScroll: true }); }, 50);
-        }
-        function selectCode() {
-          var ta = $("codeOut");
-          try { ta.focus({ preventScroll: true }); ta.select(); ta.setSelectionRange(0, ta.value.length); } catch (e) {}
-        }
-        function copyFail() { selectCode(); $("codeMsg").textContent = "Long-press karke copy karo"; }
-        $("bCode").addEventListener("click", function (e) { e.stopPropagation(); closeMenu(); openCode(true); });
-        $("eCode").addEventListener("click", function () { openCode(false); });
-        $("codeCopy").addEventListener("click", function () {
-          var code = $("codeOut").value;
-          try {
-            if (!navigator.clipboard || !navigator.clipboard.writeText) return copyFail();
-            navigator.clipboard.writeText(code).then(function () { $("codeMsg").textContent = "Copied ✓"; }, copyFail);
-          } catch (e) { copyFail(); }
-        });
-        $("codeOut").addEventListener("focus", function () { try { this.select(); } catch (e) {} });
-        $("codeClose").addEventListener("click", function () {
-          screen("codeScr", false);
-          if (codeFromHud) {
-            busy = codeBusyBefore;
-            if (autoOn && waiting && !busy) autoT = setTimeout(next, 900);
-          }
-        });
-
-        $("tCode").addEventListener("click", function () {
-          screen("loadScr", true);
-          $("loadMsg").textContent = "";
-          setTimeout(function () { $("codeIn").focus({ preventScroll: true }); }, 80);
-        });
-        $("loadBack").addEventListener("click", function () { screen("loadScr", false); });
-        $("loadGo").addEventListener("click", function () {
-          var got = null;
-          try { got = decode($("codeIn").value); } catch (e) { got = null; }
-          if (!got) { $("loadMsg").textContent = "Code galat hai"; return; }
-          Object.keys(got.gal).forEach(function (k) { unlockedEver[k] = true; });
-          save = got.st; $("codeIn").value = ""; $("loadMsg").textContent = "";
-          updateCont(); resume(got.st);
-        });
         $("bLog").addEventListener("click", function (e) {
           e.stopPropagation(); closeMenu();
           var L = $("logList"); L.innerHTML = "";
@@ -1236,7 +1206,7 @@
         function write(p) {
           if (!user || !p || !p.st) return Promise.resolve();
           const uid = user.uid;
-          const data = { state: JSON.stringify(p), chapter: p.st.chap === 2 ? 2 : 1, updatedAtMs: p.t || Date.now(), updatedAt: serverTimestamp() };
+          const data = { state: JSON.stringify(p), chapter: p.st.chap || 1, updatedAtMs: p.t || Date.now(), updatedAt: serverTimestamp() };
           writing = writing.then(() => setDoc(doc(db, "saves", uid), data)).catch(() => {});
           return writing;
         }
