@@ -218,14 +218,14 @@
             <div class="x-title__shade"></div>
             <div class="x-title__body">
               <h1 class="x-title__h">Meeting You</h1>
-              <p class="x-title__sub">2 Seasons · 32 Chapters · Ek Baarish Se Shuru</p>
+              <p class="x-title__sub">3 Seasons · 37 Chapters · Ek Baarish Se Shuru</p>
               <p class="x-muted">Login karo, progress har device pe save rahegi.</p>
               <button class="x-gbtn" id="gLogin" type="button" disabled>
                 <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
                 <span>Continue with Google</span>
               </button>
               <p class="x-login__err" id="loginMsg" role="status">Ek second…</p>
-              <p class="x-foot">A Rutvik Dangar game · v1.1</p>
+              <p class="x-foot">A Rutvik Dangar game · v1.2</p>
             </div>
           </section>
 
@@ -235,12 +235,12 @@
             <div class="x-title__shade"></div>
             <div class="x-title__body">
               <h1 class="x-title__h">Meeting You</h1>
-              <p class="x-title__sub">2 Seasons · 32 Chapters · Ek Baarish Se Shuru</p>
+              <p class="x-title__sub">3 Seasons · 37 Chapters · Ek Baarish Se Shuru</p>
               <button class="x-btn x-btn--main" id="tStart" type="button">Start</button>
               <button class="x-btn" id="tCont" type="button" disabled>Continue</button>
               <button class="x-btn" id="tRain" type="button" aria-pressed="false">Rain sound: Off</button>
               <p class="x-hi" id="tUser" hidden><span id="tHi"></span><span aria-hidden="true">·</span><button class="x-link" id="tLogout" type="button">Logout</button></p>
-              <p class="x-foot">A Rutvik Dangar game · v1.1</p>
+              <p class="x-foot">A Rutvik Dangar game · v1.2</p>
             </div>
           </section>
 
@@ -335,7 +335,7 @@
               <h2 class="x-end__name" id="endName"></h2>
               <p class="x-end__pts" id="endPts" hidden></p>
               <p class="x-muted" id="endMems"></p>
-              <p class="x-soon" id="endSoon" hidden>Season 3 · Chapter 1 — Under Development 🚧</p>
+              <p class="x-soon" id="endSoon" hidden>Meeting You poora hua ❤ Nayi kahani jaldi aa rahi hai ✨</p>
               <button class="x-btn x-btn--main" id="eNext" type="button">Chapter 2 shuru karo →</button>
               <div class="x-row">
                 <button class="x-btn" id="eReC" type="button">Replay Chapter 1</button>
@@ -600,10 +600,10 @@
           { end: true }
         ];
         /* Chapters 3-20 live in chapters.js as window.MY_CHAPTERS[n] = { title, names: [sweet, normal, quiet], script } */
-        var CH = window.MY_CHAPTERS || {}, S1 = 20, LAST = 32;
+        var CH = window.MY_CHAPTERS || {}, S1 = 20, S2 = 32, LAST = 37;
         /* internal chapter 21 = Season 2 · Chapter 1 */
-        function chLabel(c) { return c > S1 ? "Season 2 · Chapter " + (c - S1) : "Chapter " + c; }
-        function chShort(c) { return c > S1 ? "S2 Ch" + (c - S1) : "Ch" + c; }
+        function chLabel(c) { return c > S2 ? "Season 3 · Chapter " + (c - S2) : c > S1 ? "Season 2 · Chapter " + (c - S1) : "Chapter " + c; }
+        function chShort(c) { return c > S2 ? "S3 Ch" + (c - S2) : c > S1 ? "S2 Ch" + (c - S1) : "Ch" + c; }
         function chapOk(c) { return c === 1 || c === 2 || !!CH[c]; }
         function scriptOf(s) { var c = (s || st || {}).chap || 1; return c === 1 ? SCRIPT : c === 2 ? SCRIPT2 : (CH[c] ? CH[c].script : []); }
         function chTitle(c) { return c === 1 ? "Pehli Baarish" : c === 2 ? "Same Class" : (CH[c] ? CH[c].title : ""); }
@@ -803,17 +803,17 @@
           else if (c === 2) name = a >= 85 ? "Sweet — Ek Chhata, Do Dil" : a >= 60 ? "Normal — Partners Ban Gaye" : "Quiet — Sirf Project Partners?";
           else if (c === S1) { if (!st.flags.endTrue && !st.flags.endSweet && !st.flags.endNormal && !st.flags.endQuiet) decideEnding(); name = FINAL[["endTrue", "endSweet", "endNormal", "endQuiet"].filter(function (k) { return st.flags[k]; })[0]]; }
           else { var mx = CH[c].max; name = p >= mx * 0.7 ? CH[c].names[0] : p >= mx * 0.3 ? CH[c].names[1] : CH[c].names[2]; }
-          $("endEyebrow").textContent = c === S1 ? "Season 1 · The End — Thank you for playing" : c === LAST ? "Season 2 · The End — Thank you for playing" : chLabel(c) + " complete · " + chTitle(c);
+          $("endEyebrow").textContent = c === S1 ? "Season 1 · The End — Thank you for playing" : c === S2 ? "Season 2 · The End — Thank you for playing" : c === LAST ? "Meeting You · The End — Thank you for playing ❤" : chLabel(c) + " complete · " + chTitle(c);
           $("endScore").textContent = a + "/100";
           $("endWho").textContent = (isBoy() ? "Anaya Mehta" : "Aarav Shah") + " ❤ affection";
           $("endName").textContent = name;
           $("endPts").hidden = c < 3;
-          $("endPts").textContent = c === S1 ? "20 chapters, ek kahani. Shukriya ❤ Par kahani abhi khatam nahi hui…" : c === LAST ? "Season 2 poora hua — 32 chapters, ek hi kahani. Shukriya ❤" : "Is chapter ke points: " + (p > 0 ? "+" : "") + p;
+          $("endPts").textContent = c === S1 ? "20 chapters, ek kahani. Shukriya ❤ Par kahani abhi khatam nahi hui…" : c === S2 ? "Season 2 poora hua — par kahani abhi baaki hai…" : c === LAST ? "3 seasons, 37 chapters, ek baarish se shuru hui kahani. Shukriya ❤" : "Is chapter ke points: " + (p > 0 ? "+" : "") + p;
           $("endMems").textContent = "Memories unlocked: " + got.length + "/" + avail.length + (got.length && c < 3 ? " · " + got.map(function (k) { return MEM_NAMES[k]; }).join(", ") : "");
           $("eNext").hidden = c >= LAST || !chapOk(c + 1);
-          $("eNext").textContent = c === S1 ? "Season 2 shuru karo →" : chLabel(c + 1) + " shuru karo →";
+          $("eNext").textContent = c === S1 ? "Season 2 shuru karo →" : c === S2 ? "Season 3 shuru karo →" : chLabel(c + 1) + " shuru karo →";
           $("endSoon").hidden = c < LAST;
-          $("eReC").textContent = "Replay " + (c > S1 ? "S2 Ch" + (c - S1) : "Chapter " + c);
+          $("eReC").textContent = "Replay " + (c > S1 ? chShort(c) : "Chapter " + c);
           $("eRe1").hidden = c === 1;
           screen("endScr", true);
         }

@@ -2303,4 +2303,332 @@
     { n: "Season 2 yahin khatam hota hai… par kahani abhi baaki hai." },
     { end: true }
   ] };
+  /* ================= Season 3 · Chapter 1 · Apna Studio ================= */
+  C[33] = { title: "Apna Studio", names: ["Sweet — Ek Darwaza, Do Naam", "Normal — Baarish Studio", "Quiet — Khaali Kamra, Bhara Dil"], script: [
+    { scene: { bg: "office", rain: 0, tint: false } },
+    { card: "Season 3 · Ek Saal Baad…" },
+    { card: "Season 3 · Chapter 1 · Apna Studio" },
+    { n: "Sagaai ko ek saal ho gaya tha. Mumbai, Bandra ki ek purani building. Teesri manzil. Ek kamra, do khidkiyan, aur ek board jo abhi tak deewar pe nahi laga tha." },
+    { n: "Board pe likha tha: “Baarish Studio — Architecture & Heritage”. Neeche chhota sa ek navy blue chhata bana tha." },
+    { sprite: "li" },
+    { s: A, t: "(seedhi pe khade hoke, haath mein hathoda) Thoda left. Nahi, right. Nahi… wahi jahan pehle tha. (hasi) Main architect hoon, par board seedha lagana mujhse nahi hota." },
+    { s: N, t: "Hum dono architect hain. Aur dono se nahi hota. Isliye toh ek saath studio khola hai. Galtiyan bhi aadhi aadhi." },
+    { s: A, t: "(neeche utar ke, kamre ko dekhte hue) Ek saal pehle Shirin Ma'am ke studio mein intern the. Aaj apna darwaza. Apni chaabi. Darr lag raha hai?" },
+    { choice: [
+      { t: "Chaabi uske haath mein rakh ke kehna: “Darr lag raha hai. Par pehli chaabi tumhari. Pehla chhata bhi tumhara tha.”", act: true, aff: 10, flag: "firstKey", then: [
+        { s: A, t: "(chaabi ko mutthi mein band karke) Tum hamesha hisaab barabar karte ho. Pehle chhata, ab chaabi. (dheere se) Theek hai. Saath mein kholenge. Har subah.".replace("karte ho", "{g:karte|karti} ho") },
+        { n: "Usne darwaza band kiya, phir dobara khola. Bas dekhne ke liye ki sach mein apna hai." }
+      ] },
+      { t: "“Darr? Mujhe? Bilkul nahi.” — aur phir board ka kona gir jaana", aff: 5, then: [
+        { s: A, t: "(zor se hasi) Bilkul nahi, haan? Board bhi tumhari baat pe hasa." },
+        { n: "Humne board dobara lagaaya. Is baar thoda tedha. Par dono ne decide kiya ki tedha hi accha lag raha hai." }
+      ] },
+      { t: "Kuch na kehna, bas khidki khol ke bahar ki awaaz andar aane dena", act: true, aff: 4, then: [
+        { n: "Neeche autorickshaw, chai waala, kahin door samundar. {li} ne mera kandha pakda. Kamra ab khaali nahi laga." }
+      ] }
+    ] },
+    { sprite: null },
+
+    { scene: { bg: "studio", rain: 0.3, tint: true } },
+    { rain: 0.3 },
+    { n: "Shaam. Pehla din. Do table, ek purana sofa jo {g:Meher|Vihaan} ne apne ghar se bheja tha, aur ek printer jo sirf tab chalta tha jab use thappad maaro." },
+    { s: "{g:Meher|Vihaan}", t: "(darwaze se, gubbaaron ke saath) Surprise! Main sirf housewarming ke liye {g:aayi|aaya} hoon. Aur yeh dekhne ki sofa ki jagah sahi hai ya nahi. (rukte hue) Nahi hai. Khidki ke paas karo." },
+    { s: "Shirin Kapadia", t: "(peeche se, haath mein ek chhota sa paudha) Mujhe gubbaare pasand nahi. Isliye tulsi laayi hoon. Har studio mein kuch zinda hona chahiye." },
+    { n: "Ar. Shirin Kapadia. Jinke studio mein humne seekha tha ki ek line bhi soch ke kheenchi jaati hai. Aaj woh humare darwaze pe khadi thi." },
+    { sprite: "li" },
+    { s: A, t: "Ma'am, aap… aap sach mein aayi. Humne socha tha aap sirf email karengi." },
+    { s: "Shirin Kapadia", t: "Email se aashirwaad nahi jaata. (deewar pe board dekh ke) Tedha hai. Accha hai. Seedhi cheezein jaldi bhool jaate hain log." },
+    { s: "Shirin Kapadia", t: "Ek baat yaad rakhna. Studio chhota ho toh kaam ko chhota mat hone dena. Aur ek doosre ko kabhi client mat banana." },
+    { choice: [
+      { t: "“Ma'am, aapke studio ka ek niyam hum yahan bhi rakhenge — har drawing pe pehle haath se ek sketch.”", aff: 9, flag: "shirinRule", then: [
+        { s: "Shirin Kapadia", t: "(halki si muskaan, jo bahut kam dikhti thi) Toh maine kuch toh sikhaaya. Theek hai. Ab main ja rahi hoon. Mujhe bheed pasand nahi." },
+        { s: "{g:Meher|Vihaan}", t: "(dheere se) Ma'am muskuraayi. Maine dekha. Main gawah hoon." }
+      ] },
+      { t: "“Aapke bina yeh studio nahi hota. Thank you, Ma'am.”", aff: 6, then: [
+        { s: "Shirin Kapadia", t: "Mere bina bhi hota. Bas thoda der se. Shukriya mat bolo, kaam karo." }
+      ] }
+    ] },
+    { sprite: null },
+
+    { scene: { bg: "studio", rain: 0.8, tint: true } },
+    { rain: 0.8 },
+    { n: "Raat. Sab chale gaye. Bahar Mumbai ki baarish phir shuru. Aur {li} ke phone pe ek email." },
+    { s: "📧 Heritage Cell, AMC", t: "Dear Applicant, restoration of the Haveli, Khadia ni Pol, has received FINAL APPROVAL. Grant released. Condition: work must be completed and inaugurated within 90 days." },
+    { sprite: "li" },
+    { s: A, t: "(aankhein badi, phir chup) Final approval. Dada ki haveli. (phone neeche rakh ke) Nabbe din, {name}. Teen mahine. Ek purani haveli ke liye yeh kuch bhi nahi hai." },
+    { s: A, t: "Aur studio abhi kal hi khula hai. Agar main Ahmedabad {g:chali gayi|chala gaya}, toh yeh sab…" },
+    { choice: [
+      { t: "“Hum dono jaayenge. Baarish Studio ka pehla project — tumhare Dada ki haveli. Isse behtar shuruaat kya hogi?”", aff: 11, flag: "haveliFirst", then: [
+        { s: A, t: "(meri taraf dekh ke, aawaaz bhaari) Tumne ek pal bhi nahi socha. Seedha ‘hum’." },
+        { s: N, t: "Socha tha. Do saal pehle. Jab pol ki chhat pe tumne patang meri taraf ki thi." }
+      ] },
+      { t: "“Nabbe din bahut hain. Plan banaate hain. Abhi. Isi raat.”", act: true, aff: 7, then: [
+        { n: "Humne printer ko thappad maara, ek bada kaagaz nikaala, aur raat ke do baje tak ek timeline bana di. Upar likha tha: ‘Haveli — Plan C’." }
+      ] }
+    ] },
+    { s: A, t: "(khidki ke paas, baarish dekhte hue) Pata hai, Dada kehte the ki haveli khud batati hai kab use ghar waapas chahiye. Shayad abhi bata rahi hai.", when: "aff>=85" },
+    { s: A, t: "(dheere se) Darr toh lag raha hai. Par tum saath ho, toh nabbe din bhi chalenge.", when: "aff<85" },
+    { sprite: null },
+    { n: "Us raat studio ki tulsi pe pehli boond giri. Kuch zinda tha. Aur kuch shuru ho raha tha." },
+    { end: true }
+  ] };
+
+  /* ================= Season 3 · Chapter 2 · Haveli Ka Kaam ================= */
+  C[34] = { title: "Haveli Ka Kaam", names: ["Sweet — Ek Eent, Do Haath", "Normal — Pol Ki Mitti", "Quiet — Tooti Chhat, Saabut Iraada"], script: [
+    { scene: { bg: "uttarayan", rain: 0, tint: false } },
+    { card: "Season 3 · Chapter 2 · Haveli Ka Kaam" },
+    { n: "Ahmedabad. Khadia ki pol. Wahi patli gali, wahi lakdi ke jharokhe. Bas is baar haveli ke darwaze pe taala nahi tha. Bamboo ki scaffolding thi." },
+    { sprite: "riya" },
+    { s: R, t: "(helmet pehne, clipboard ke saath) Welcome to Site Office! Matlab haveli ki seedhi. Maine teen mistri, do carpenter aur ek chai waala book kar liya hai. Chai waala sabse zaroori hai." },
+    { s: R, t: "Haan, main ab planner nahi, project coordinator hoon. Bina salary ke. Bas jab shaadi ho, toh sabse badi kursi meri." },
+    { sprite: null },
+    { s: K, t: "(thermos aur kulhad ke saath) Chai Spot ka branch kholna pada yahan. {li} beta, tumhare Dada ke saath maine isi aangan mein chai pi thi. Ab tumhare saath peeunga." },
+    { sprite: "li" },
+    { s: A, t: "(jharokhe ko chhoote hue) Kaka, yeh lakdi dekhiye. Sau saal purani. Isme deemak nahi lagi. Dada kehte the, sagwan aur zid, dono nahi tootte." },
+    { choice: [
+      { t: "Uske saath jharokhe ki lakdi pe haath rakh ke: “Toh isse hum naya nahi banayenge. Bas wapas jagayenge.”", act: true, aff: 10, flag: "wakeHaveli", then: [
+        { s: A, t: "(muskaan) Wapas jagayenge. Yeh line bhi churaungi. Plaque pe likhenge.".replace("churaungi", "{g:churaungi|churaunga}") },
+        { s: K, t: "(chai dete hue) Line ka royalty Kaka ko bhi milega. Chai ke badle." }
+      ] },
+      { t: "Turant measuring tape nikaal ke kaam shuru karna", act: true, aff: 6, then: [
+        { s: R, t: "Pehle chai. Phir tape. Yeh pol ka niyam hai. Kaka, inhe samjhaao." }
+      ] }
+    ] },
+    { sprite: null },
+
+    { scene: { bg: "inside", rain: 0, tint: true } },
+    { n: "Teen hafte. Chuna, eent, purani tiles jo ek ek karke dhoyi gayi. Neeche library-cafe ki shelves, upar do kamre homestay ke liye. Aur aangan mein — humara pavilion. Tin ki chhat, ek kund." },
+    { n: "Prof. Desai har Sunday aate. Haath mein wahi laal pen. Har drawing pe ek gol nishaan." },
+    { s: P, t: "(drawing pe laal gol) Yeh seedhi bahut seedhi hai. Haveli mein seedhiyan thodi thaki hui honi chahiye. Jaise sau saal se chadh rahi hon." },
+    { s: N, t: "Sir, aap graduation ke baad bhi laal pen nahi chhodenge?" },
+    { s: P, t: "Laal pen mujhe nahi chhodta, {name}. (muskaan) Aur tum log mujhe abhi bhi Sunday ko bula rahe ho. Toh shikaayat mat karo." },
+    { n: "Sab theek chal raha tha. Bajat thoda tight, par theek. Phir aaya July." },
+
+    { scene: { bg: "rain", rain: 2.5, tint: true } },
+    { rain: 2.5 },
+    { n: "Raat ke do baje. Ahmedabad ki sabse tez baarish, das saal mein. Pol ki galiyon mein ghutne tak paani." },
+    { n: "Phone baja. Mistri ka. “Sahab, uttar waali chhat ka ek hissa baith gaya. Jo abhi abhi naya lagaaya tha.”" },
+    { sprite: "li" },
+    { s: A, t: "(bheegi hui, tooti chhat ke neeche khade hoke, aawaaz kaanpti) Teen hafte ka kaam. Aur grant ka bajat… ab nayi lakdi ke paise kahan se aayenge? Nabbe din mein se sirf pachaas bache hain.".replace("bheegi hui", "{g:bheegi hui|bheega hua}") },
+    { s: A, t: "Shayad yeh haveli sach mein bachne ke liye nahi bani. Shayad Dada galat the." },
+    { choice: [
+      { t: "Navy blue chhata uske sar pe karke: “Dada galat nahi the. Chhat giri hai, iraada nahi. Kal subah se dobara. Saath mein.”", act: true, aff: 12, flag: "rainStand", then: [
+        { s: A, t: "(chhate ke neeche, aansu aur baarish ek saath) Yeh chhata… tum har toofaan mein yahi le aate ho.".replace("aate ho", "{g:aate|aati} ho") },
+        { s: N, t: "Kyunki yeh chhata kabhi haara nahi. Ek tilli tedhi hai, par haara nahi." }
+      ] },
+      { t: "Bina kuch kahe tarpaulin uthaana aur baaki hisse ko dhakne lagna", act: true, aff: 8, then: [
+        { n: "{li} ek pal {g:dekhti rahi|dekhta raha}. Phir doosra kona pakad liya. Subah tak baaki haveli sookhi thi." }
+      ] },
+      { t: "“Shayad grant ki deadline badhwa sakte hain. Kal AMC chalte hain.”", aff: 5, then: [
+        { s: A, t: "(saans lete hue) Haan. Ek raasta toh hai. Theek hai. Kal." }
+      ] }
+    ] },
+    { sprite: null },
+
+    { scene: { bg: "uttarayan", rain: 0, tint: true } },
+    { n: "Agli subah. Pol ke log darwaze pe khade the. Kisi ke haath mein purani sagwan ki patti, kisi ke haath mein eent. Ek budhi Ba ke haath mein garam thepla." },
+    { s: "Pol Waale Ba", t: "Is haveli ne humari teen peedhiyon ki shaadiyan dekhi hain. Hum ise girne nahi denge. Lakdi humare godown mein padi hai. Le jao." },
+    { sprite: "riya" },
+    { s: R, t: "(clipboard pe tez tez likhte hue) Maine raat ko pol ke WhatsApp group mein ek message daala tha. Bas ek photo. Tooti chhat aur tum dono. Dekho kya hua." },
+    { s: R, t: "Bajat ki tension mat lo. Crowdfunding ka link bhi chala diya hai. ‘Save Dada Ki Haveli’. Pehle ghante mein Kaka ne paanch hazaar daale." },
+    { sprite: null },
+    { s: K, t: "(sharma ke) Udhaar chukaana tha. Is aangan ki chai ka." },
+    { sprite: "li" },
+    { s: A, t: "(mujhse dheere se) Maine kal raat haar maan li thi. Aur aaj poori pol yahan hai. (hasi) Dada sach mein sahi the. Sagwan aur zid.", when: "aff>=85" },
+    { s: A, t: "(dheere se) Kal raat main gir {g:gayi thi|gaya tha}. Aaj sab ne utha liya. Tumne bhi.", when: "aff<85" },
+    { sprite: null },
+    { n: "Us din chhat pe pehli nayi patti {li} ne lagaayi. Doosri maine. Aur teesri Mehul Kaka ne, jo kehte rahe ki unhe seedhi se darr lagta hai." },
+    { end: true }
+  ] };
+
+  /* ================= Season 3 · Chapter 3 · Shaadi Ki Taiyaari ================= */
+  C[35] = { title: "Shaadi Ki Taiyaari", names: ["Sweet — Do Ghar, Ek Mandap", "Normal — Guest List Ka Yudh", "Quiet — Shor Mein Ek Khaali Chhat"], script: [
+    { scene: { bg: "inside", rain: 0, tint: false } },
+    { card: "Season 3 · Chapter 3 · Shaadi Ki Taiyaari" },
+    { n: "August. Haveli ka kaam aadha ho chuka tha. Aur tabhi dono parivaaron ne ek saath faisla kiya — shaadi isi saal. Isi haveli mein. Inauguration ke baad." },
+    { n: "Humare ghar ka drawing room. Ek taraf Mummy, Papa, Tanvi. Doosri taraf {g:Mehta|Shah} Uncle aur Aunty. Beech mein ek guest list jo teen page lambi thi." },
+    { s: "Mummy", t: "Bas teen sau log. Zyada nahi. Mausi, chacha, chacha ke saale, unke padosi…" },
+    { s: "{g:Mehta|Shah} Aunty", t: "Humare taraf bhi teen sau. Toh chhe sau. Haveli ke aangan mein chhe sau log?" },
+    { s: "Tanvi", t: "(calculator ke saath) Ek aadmi ko do square feet. Aangan aath sau square feet ka hai. Matlab sab log ek pair pe khade rahenge. Aur garba kaise hoga?" },
+    { sprite: "riya" },
+    { s: R, t: "(darwaze se, file ke saath) Ruko! Sab ruko! Official wedding planner aa gayi hai. Free mein. Par meri baat maani jaayegi." },
+    { s: R, t: "Niyam ek: guest list ek sau pachaas. Niyam do: baaki ke liye alag reception, kisi hall mein. Niyam teen: koi bahas nahi. Mujhse." },
+    { choice: [
+      { t: "“Riya ki baat final. Aur jo bahas karega, use Riya ki clipboard se maar padegi.”", aff: 9, flag: "riyaBoss", then: [
+        { s: R, t: "(clipboard uthaate hue) Dekha? Yeh {g:dulha|dulhan} samajhdaar hai. Isliye maine pehli baar poocha tha, ‘tu use pasand karta hai na?’".replace("karta hai", "{g:karta|karti} hai") },
+        { s: "Mummy", t: "(hasi rokte hue) Theek hai, Riya beta. Ek sau pachaas. Par mausi ka naam pehle." }
+      ] },
+      { t: "“Hum dono ko sirf woh log chahiye jo pehli baarish se ab tak saath the.”", aff: 7, then: [
+        { s: "{g:Mehta|Shah} Uncle", t: "(dheere se) Yeh list chhoti hai. Par sabse bhaari." }
+      ] },
+      { t: "Chupke se kitchen mein jaake mohanthal khaana", act: true, aff: 3, then: [
+        { s: "Tanvi", t: "(peeche se) {g:Pakde gaye|Pakdi gayi}! Apni hi shaadi ki meeting se bhaag rahe ho? {g:Bhaiya|Didi}, sharam karo.".replace("rahe ho", "{g:rahe|rahi} ho") }
+      ] }
+    ] },
+    { sprite: null },
+
+    { scene: { bg: "garba", rain: 0, tint: true } },
+    { n: "Ek hafte baad. Kapde ki dukaan. Saree, sherwani, lehenga, kurte. Aur chaaron taraf aaine." },
+    { s: "{g:Meher|Vihaan}", t: "(Mumbai se seedha, bag ke saath) Main {g:aa gayi|aa gaya}! Kyunki is shaadi ke kapde main {g:chunungi|chununga}. Yeh mera haq hai. Zaveri Bazaar ka karz." },
+    { s: "{g:Meher|Vihaan}", t: "(ek ek kapda phenkte hue) Nahi. Nahi. Yeh bilkul nahi. Yeh… (rukte hue) Yeh. Navy blue. Par isme halka sa sona. Baarish mein dhoop jaisa." },
+    { sprite: "li" },
+    { s: A, t: "(aaine mein dekh ke, dheere se) Navy blue phir se? Log kahenge humare paas doosra rang hi nahi hai." },
+    { choice: [
+      { t: "“Log sahi kahenge. Humare paas ek hi rang hai. Woh jo pehle din tumhare chhate pe tha.”", aff: 10, flag: "oneColour", then: [
+        { s: A, t: "(sharma ke) Theek hai. Navy blue. Hamesha. (aaine mein meri taraf dekh ke) Par tum bhi pehnoge. Matching. Koi bahaana nahi.".replace("pehnoge", "{g:pehnoge|pehnogi}") },
+        { s: "{g:Meher|Vihaan}", t: "(aankhein ponchte hue) Main ro {g:rahi|raha} hoon. Dukaan mein. Kisi ko mat batana." }
+      ] },
+      { t: "“Laal pehno. Shaadi hai. Thoda badlaav.”", aff: 4, then: [
+        { s: A, t: "(laal chunni haath mein, phir wapas rakh ke) Pehen ke dekha. Main nahi lag rahi. Navy hi theek hai.".replace("lag rahi", "lag {g:rahi|raha}") }
+      ] }
+    ] },
+    { sprite: null },
+
+    { scene: { bg: "uttarayan", rain: 0, tint: true } },
+    { n: "Raat. Haveli ki chhat. Neeche mistri ka kaam band, upar sitaare. Do hafte se hum dono ne ek bhi shaam akele nahi bitaayi thi." },
+    { sprite: "li" },
+    { s: A, t: "(ghutno pe chehra rakh ke) Din mein haveli. Shaam ko caterer. Raat ko Mumbai ke client ke email. Aur beech mein mausi ki saree ka rang." },
+    { s: A, t: "Kabhi kabhi lagta hai hum shaadi nahi, ek aur project kar rahe hain. Deadline waala. (dheere se) Kya hum bahut zyada kar rahe hain?" },
+    { choice: [
+      { t: "Phone dono ke band karke kehna: “Aaj raat koi deadline nahi. Sirf tum, main, aur yeh chhat. Jaise Uttarayan pe.”", act: true, aff: 11, flag: "phonesOff", then: [
+        { n: "Humne dono phone neeche rakh diye. Chhat pe let ke aasman dekha. Koi patang nahi thi. Par ek pal ko laga, dhaaga ab bhi humare haathon mein hai." },
+        { s: A, t: "(dheere se) Yaad hai? Isi chhat pe tumhari patang kati thi. Aur tum phir bhi has rahe the.".replace("has rahe the", "has {g:rahe|rahi} the") },
+        { s: N, t: "Kyunki tum saath thi. Patang ka kya hai.".replace("saath thi", "saath {g:thi|the}") }
+      ] },
+      { t: "“Haan, zyada hai. Toh kuch kaam Riya aur {g:Meher|Vihaan} ko de dete hain. Woh khush honge.”", aff: 7, then: [
+        { s: A, t: "(hasi) Woh khush nahi, pagal ho jayenge. Par haan. Theek hai. Hum sirf haveli aur ek doosre ko sambhalenge." }
+      ] }
+    ] },
+    { s: A, t: "Shaadi ek din ki hai. Par yeh chhat, yeh shaamein, yeh hamesha ki hain. Inhe nahi khona.", when: "aff>=85" },
+    { s: A, t: "Bas vaada karo, kitni bhi bheed ho, ek shaam humari rahegi. Har hafte.", when: "aff<85" },
+    { sprite: null },
+    { n: "Neeche se Riya ki awaaz aayi: “Tum dono upar ho kya? Caterer ka phone hai!” Humne jawaab nahi diya. Ek shaam ke liye, haveli ne bhi humein chhupa liya." },
+    { end: true }
+  ] };
+
+  /* ================= Season 3 · Chapter 4 · Aakhri Imtihaan ================= */
+  C[36] = { title: "Aakhri Imtihaan", names: ["Sweet — Ek Doosre Ko Chunna", "Normal — Toofaan Aur Tareekh", "Quiet — Ek Phone, Ek Faisla"], script: [
+    { scene: { bg: "studio", rain: 0, tint: false } },
+    { card: "Season 3 · Chapter 4 · Aakhri Imtihaan" },
+    { n: "October. Nabbe din mein se das bache. Haveli ka inauguration 24 October. Aur Baarish Studio ke inbox mein ek email jisne sab hila diya." },
+    { s: "📧 Coastal Arts Foundation", t: "We would like Baarish Studio to design our new public library in Alibaug. Final presentation: 24 October, 11 AM, Mumbai. This is the only date the board can meet." },
+    { s: "{g:Meher|Vihaan} · 📱 call", t: "Yeh bahut bada hai! Coastal Arts! Aisa project chhote studio ko paanch saal mein ek baar milta hai. Aur tareekh… wahi din? Haveli ka din?" },
+    { n: "Main Ahmedabad mein {g:tha|thi}. {li} Mumbai mein, client meeting ke liye. Aur hum dono ke phone pe ek hi tareekh chamak rahi thi." },
+    { n: "Upar se weather app pe ek laal nishaan. Arabian Sea mein ek toofaan. 23-24 October ko Gujarat aur Mumbai ke kinaare pe tez baarish." },
+
+    { scene: { bg: "inside", rain: 0.6, tint: true } },
+    { rain: 0.6 },
+    { s: "{li} · 📱 video call", t: "({g:thaki hui|thaka hua} aawaaz) Tum haveli sambhalo. Main presentation de {g:deti|deta} hoon. Alag alag shehar. Ek din. Ho jayega." },
+    { s: "{li} · 📱 video call", t: "(phir rukte hue) Par Dada ki haveli ka darwaza khule aur main wahan na rahun… (aawaaz toot jaati hai) Yeh main kaise karun?" },
+    { choice: [
+      { t: "“Nahi. Hum ek doosre ko nahi chhodenge. Na haveli ke liye, na kisi client ke liye. Ek raasta dhoondhenge jisme dono saath hon.”", aff: 12, flag: "chooseEachOther", then: [
+        { s: "{li} · 📱 video call", t: "(lambi chuppi, phir halki si muskaan) Shirin Ma'am ne kaha tha — ek doosre ko kabhi client mat banana. Main bhool {g:gayi thi|gaya tha}. Tumne yaad dilaaya." },
+        { s: N, t: "Toh ab socho. Do architect. Ek problem. Kya karenge?" }
+      ] },
+      { t: "“Client ko mana kar dete hain. Haveli pehle.”", aff: 7, then: [
+        { s: "{li} · 📱 video call", t: "Itna bada project chhod dein? (rukte hue) …Shayad. Par pehle ek baar aur sochte hain. Kuch aur raasta ho." }
+      ] },
+      { t: "“Tum presentation do. Main haveli ki video call pe tumhe har pal dikhaunga.”".replace("dikhaunga", "{g:dikhaunga|dikhaungi}"), aff: 5, then: [
+        { s: "{li} · 📱 video call", t: "(aankhein geeli) Screen pe Dada ka darwaza? (sir hila ke) Nahi. Kuch aur sochte hain." }
+      ] }
+    ] },
+    { n: "Aur phir, ek hi pal mein, dono ne ek hi baat kahi: “Presentation… haveli mein kyun nahi?”" },
+    { s: "{li} · 📱 video call", t: "(uchhal ke) Library ka design hai na? Toh unhe ek library dikhaate hain jo humne banaayi hai! Haveli ki neeche waali library-cafe. Live. Asli." },
+
+    { scene: { bg: "office", rain: 0.4, tint: true } },
+    { rain: 0.4 },
+    { n: "Do din baad. Coastal Arts ka board room. Ek lambi table. {li} ne laptop khola aur ek hi slide dikhaayi: haveli ki library, aangan ka pavilion, aur kund mein girti baarish." },
+    { s: "Board Member", t: "Interesting. Par hum Mumbai ke log hain. Ahmedabad kaise aayenge? Aur toofaan ki khabar hai." },
+    { s: RV, t: "(kone ki kursi se, haath uthaa ke) Main is board ka naya design consultant hoon. Aur main {g:guarantee deta|guarantee deti} hoon — yeh studio toofaan mein bhi kaam karta hai. Maine dekha hai. Jury se ek raat pehle." },
+    { n: RV + ". Jo kabhi Garba Night pe pair {g:chheen raha tha|chheen rahi thi}. Jo kabhi model ka column gira ke {g:bhaag gaya tha|bhaag gayi thi}. Aaj humare liye {g:khada tha|khadi thi}." },
+    { s: RV, t: "(baad mein, corridor mein, mujhse phone pe) Socha ab hisaab barabar kar doon. Tumne jury mein mera naam galat tarah se nahi liya tha. Main bhi nahi bhoola.".replace("bhoola", "{g:bhoola|bhooli}") },
+    { choice: [
+      { t: "“Hisaab kabhi tha hi nahi. Shaadi mein aana. Pehli row mein. Dost ki tarah.”", aff: 9, flag: "rvFriend", then: [
+        { s: RV, t: "(hasi) Pehli row? Riya maarne aayegi. Par theek hai. {g:Aaunga|Aaungi}. Aur is baar dandiya mein haarunga nahi.".replace("haarunga", "{g:haarunga|haarungi}") }
+      ] },
+      { t: "“Thanks, " + RV + ". Sach mein.”", aff: 5, then: [
+        { s: RV, t: "Thanks mat bolo. Bas khaana accha hona chahiye shaadi mein. Main {g:aa raha|aa rahi} hoon." }
+      ] }
+    ] },
+    { s: "📧 Coastal Arts Foundation", t: "The board will visit the Haveli on 24 October, 4 PM, for the inauguration and presentation. Weather permitting." },
+
+    { scene: { bg: "rain", rain: 2.2, tint: true } },
+    { rain: 2.2 },
+    { n: "23 October. Raat. Toofaan ka kinaara Ahmedabad tak pahuncha. Pol mein hawa seeti bajaa rahi thi. Aur haveli ke aangan mein naya pavilion — tin ki chhat, kund — pehli baar asli toofaan dekh raha tha." },
+    { sprite: "li" },
+    { s: A, t: "(torch ke saath, bheege hue) Agar pavilion ki chhat ud gayi, toh kal kuch dikhane ko nahi bachega.".replace("bheege hue", "{g:bheegi hui|bheega hua}") },
+    { n: "Hum dono raat bhar aangan mein rahe. Riya ne nali saaf ki. Kaka ne chai ka stall andar khiskaaya. Pol ke ladke rassi le aaye." },
+    { n: "Subah chaar baje hawa ruki. Chhat wahin thi. Aur kund paani se bhara tha. Uspe baarish ki aakhri boondein gol gol ghere bana rahi thi." },
+    { s: A, t: "(kund ke kinaare baith ke, dheere se) Dekha? Chhat ne baarish suni. Bhaagi nahi. Bilkul humari tarah.", when: "aff>=85" },
+    { s: A, t: "(thak ke, mere kandhe pe sar rakh ke) Bach gaya. Sab bach gaya. Hum bhi.", when: "aff<85" },
+    { sprite: null },
+    { n: "Aasman mein pehli roshni aayi. Aaj 24 October tha. Aur humne ek doosre ko chuna tha. Phir se." },
+    { end: true }
+  ] };
+
+  /* ================= Season 3 · Chapter 5 · Meeting You ================= */
+  C[37] = { title: "Meeting You", names: ["Sweet — Umbrella for Two", "Normal — Haveli Ki Baarish", "Quiet — Pehli Line, Aakhri Vaada"], script: [
+    { scene: { bg: "uttarayan", rain: 0, tint: false } },
+    { card: "Season 3 · Chapter 5 · Meeting You" },
+    { n: "24 October. Shaam chaar baje. Khadia ki pol. Toofaan ke baad aasman dhula hua tha, aur haveli ke darwaze pe genda phoolon ki toran." },
+    { n: "Neeche library-cafe ki shelves pe nayi purani kitaabein. Aangan mein pavilion, kund mein raat ka paani. Aur darwaze ke paas ek chhota sa patthar ka plaque." },
+    { s: "📜 Plaque", t: "“Naya nahi banaaya. Bas wapas jagaaya.” — Baarish Studio, in memory of Dada." },
+    { sprite: "li" },
+    { s: A, t: "(ribbon ke saamne, kaanpte haath, phir mera haath pakad ke) Akele nahi kaatungi. Dada ki haveli hai. Par ab yeh humari hai.".replace("kaatungi", "{g:kaatungi|kaatunga}") },
+    { n: "Ribbon kata. Taaliyan. Pol ke log, Coastal Arts ka board, Prof. Desai, Shirin Kapadia. Aur {g:Mehta|Shah} Uncle, jo kone mein khade, chupchaap ro rahe the." },
+    { s: "Board Member", t: "(aangan ka pavilion dekh ke) Hum yahan presentation sunne aaye the. Ab zaroorat nahi. Library ka project aapka hai, Baarish Studio." },
+    { s: "Shirin Kapadia", t: "(dheere se, sirf humse) Maine kaha tha na. Studio chhota ho toh kaam ko chhota mat hone dena. Tumne nahi hone diya." },
+    { sprite: null },
+
+    { scene: { bg: "garba", rain: 0, tint: true } },
+    { n: "Aur phir, usi shaam, usi aangan mein — shaadi. Riya ka plan. Inauguration aur shaadi ek hi din. “Ek hi toran, do kaam. Bajat bhi bachega,” usne kaha tha." },
+    { n: "Pavilion ke neeche mandap. Lanterns. Dhol. Do parivaar, ek pol." },
+    { s: "Tanvi", t: "(maaik pe, haath mein ek purani diary) Jaisa maine sagaai pe vaada kiya tha — diary waali kahani! Pehle din {g:Bhaiya|Didi} ne likha tha: ‘Aaj ek ajnabi ne chhata diya. Naam nahi poocha. Kal phir cafe {g:jaunga|jaungi}.’" },
+    { s: "Riya", t: "(clipboard se Tanvi ko maarte hue) Baaki baad mein! Muhurat ka waqt hai!" },
+    { n: "Aur {li} {g:aayi|aaya}. {g:Navy blue lehenge mein, halka sa sona, baalon mein mogra|Navy blue sherwani mein, halka sa sona, haath mein mogre ka gajra}. Wahi rang. Hamesha wahi rang." },
+    { s: "{g:Meher|Vihaan}", t: "(pehli row se, zor se) Maine chuna tha yeh! Sab dekh lo! Mera kaam hai!" },
+    { s: RV, t: "(bagal mein baith ke) Shant. Aaj tum hero nahi ho. Woh dono hain." },
+    { sprite: "li" },
+    { n: "Pehle phere ke beech… aasman garja." },
+
+    { scene: { bg: "rain", rain: 2, tint: true } },
+    { rain: 2 },
+    { n: "Baarish. Toofaan ke baad ki aakhri baarish. Pavilion ki tin ki chhat pe wahi awaaz. Jaise pehle din, campus ke purane shade pe." },
+    { n: "Log hasne lage. Kisi ne bhaagne ki koshish nahi ki. Pandit ji ne bhi bas apni pothi dhak li aur kaha: “Baarish shubh hai. Chalne do.”" },
+    { s: R, t: "(chhata uthaa ke, aankhon mein chamak) Ek minute. Yeh chahiye tha na?" },
+    { n: "Riya ke haath mein wahi navy blue chhata. Purana, ek tilli tedhi. Navrang ki pehli baarish waala. Usne {li} ke haath mein de diya." },
+    { s: A, t: "(chhata mere sar pe karte hue, mandap ke beech, wahi line) Sketchbook andar rakho. Paper kharab ho jayega." },
+    { s: N, t: "(jeb se ek purana, bheega sa sketchbook nikaal ke) Isme pehla page abhi bhi khaali hai. Tumhare liye rakha tha. Aaj bharunga.".replace("bharunga", "{g:bharunga|bharungi}") },
+    { n: "Pehle page pe ek chhota sa sketch. The Chai Spot ka shade. Do log. Ek chhata. Neeche likha: “Umbrella for Two.”" },
+    { choice: [
+      { t: "Vaada: “Tum ek ajnabi ko chhata {g:de rahi thi|de rahe the}. Tumhe nahi pata tha ki tum mujhe ghar {g:de rahi ho|de rahe ho}. Ab har baarish mein, main tumhara chhata {g:banunga|banungi}.”", aff: 12, flag: "vowUmbrella", then: [
+        { s: A, t: "(aansu, hasi, baarish) Aur main har baar woh line {g:bolungi|bolunga}. Sketchbook andar rakho. Taaki tumhara har sapna sookha rahe." },
+        { s: P, t: "(Mehul Kaka ke kaan mein) Mehul bhai, maine apne poore career mein itni acchi presentation nahi dekhi." },
+        { s: K, t: "(chai ka kulhad uthaa ke) Sir, yeh presentation nahi. Yeh chai ka udhaar tha. Aaj poora chuk gaya." }
+      ] },
+      { t: "Vaada: “Pehli baar tumne mera naam nahi poocha tha. Aaj main tumhe apna poora naam deta hoon. Aur poori zindagi.”".replace("deta hoon", "{g:deta|deti} hoon"), aff: 10, flag: "vowName", then: [
+        { s: A, t: "(dheere se) Naam ki zaroorat kabhi thi hi nahi. Par le {g:leti|leta} hoon. Hamesha ke liye." }
+      ] },
+      { t: "Kuch na kehna, bas chhate ke neeche uska haath pakad ke agla phera lena", act: true, aff: 8, then: [
+        { n: "Koi vaada zor se nahi bola gaya. Bas ek haath, doosre haath mein. Aur ek chhata, dono ke sar pe. Wahi kaafi tha." }
+      ] }
+    ] },
+    { s: A, t: "(saat phere ke baad, kaan mein) Pata hai, us din mujhe bhi bheegna tha. Par tum bheeg {g:rahe|rahi} the. Isliye chhata diya. Aaj samajh aaya — main tumhe {g:dhoondh rahi thi|dhoondh raha tha}.", when: "aff>=85" },
+    { s: A, t: "(saat phere ke baad, kaan mein) Raasta lamba tha. Kabhi tedha. Par har baar tum usi chhate ke neeche {g:aaye|aayi}. Shukriya.", when: "aff<85" },
+    { n: "Aangan mein sab baarish mein naachne lage. Riya, Tanvi, {g:Meher|Vihaan}, " + RV + ", dono parivaar, pol ke log. Shirin Kapadia bhi, jinhe bheed pasand nahi thi, pavilion ke kinaare halke se taal de rahi thi." },
+    { sprite: null },
+
+    { scene: { bg: "keyart", rain: 0.5, tint: true } },
+    { rain: 0.5 },
+    { n: "Kuch saal baad." },
+    { n: "Khadia ki pol. Haveli ki library-cafe mein monsoon ki ek shaam. Bahar baarish. Andar Mehul Kaka ki chai, ab unke bhatije ke haath ki." },
+    { n: "Ek chhota sa bachcha khidki ke paas khada tha, haath mein crayon, bahar baarish ko dekhte hue. Uska sketchbook bheegne wala tha." },
+    { sprite: "li" },
+    { s: A, t: "(muskaan ke saath, purana navy blue chhata kholte hue, bachche ke paas jhuk ke) Sketchbook andar rakho. Paper kharab ho jayega." },
+    { n: "Main counter se dekh {g:raha|rahi} {g:tha|thi}. Wahi chhata. Wahi line. Wahi baarish. Aur meri duniya, poori ki poori, us ek chhate ke neeche." },
+    { sprite: null },
+    { n: "Ek baarish se shuru hui kahani… hamesha ke liye." },
+    { n: "— Meeting You · The End ❤" },
+    { end: true }
+  ] };
 })();
